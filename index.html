@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANVIS | PET STORE</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+
+        body{
+            width:100vw;
+            height:100vh;
+            margin:0;
+            overflow-x: hidden;
+        }
+        .page1{
+            margin:0;
+            padding:0;
+            width:100vw;
+            height:625px;
+            background:url(https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .page12{
+            display: flex;
+            justify-content: space-between;
+            width:1250px;
+            padding:15px;
+        }
+        .tags{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+       }
+        ul{
+            display: flex;
+            padding-right:50px;
+        }
+        .tags a{
+            text-decoration: none;
+            color: white;
+            margin:15px;
+            font-family: sans-serif;
+        }
+        .page13{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           color:white;
+        }
+        .page13 h1{
+            margin:0;
+            font-size:50px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -3px;
+        }
+        .pets{
+            font-size: 117px;
+            font-weight: 900;
+            font-family: 'Poppins',sans-serif;
+            letter-spacing: -3px;
+            margin-top:-50px;
+        }
+        .page13 p{
+            font-family: sans-serif;
+        }
+        .page13 a{
+            text-decoration: none;
+            color:black;
+            padding:17px 40px;
+            background-color: #ffd936;
+            margin-top:30px;
+            border-radius: 5px;
+            color:#536942;
+            transition: 0.2s;
+        }
+        .page13 a:hover{
+            opacity:0.8;
+        }
+        .call{
+            padding:15px 20px;
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color: #ffd936;            
+        }
+        .call:hover{
+            background-color: #ffd936;
+            opacity:0.8;
+        }
+        .page2{
+            width:100vw;
+            height:230px;
+            background-color: rgb(56, 188, 240);
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        .image2{
+            width:1200px;
+            padding-left:120px;
+        }
+        .page3{
+            width:100vw;
+            height: 200px;
+            background-color: #ffd936;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page3 h1{
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 64px;
+            font-family: 'Alatsi', sans-serif;
+            font-weight: 700;
+        }
+        .page3 p{
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        .page4{
+            width:100vw;
+            height:920px;
+            background-color: #cb8585;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .page41 h1{
+            font-size:67px;
+            font-family: "Abril Fatface",Sans-serif;
+            color:#f3df11;
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1.3;
+        }
+        .line{
+            margin:0;
+            padding:0;
+            width:100px;
+            height:3px;
+            background-color: #f3df11;
+        }
+        .page42{
+            width:1000px;
+            height: 560px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom:100px; 
+        }
+        .image41,.image42,.image43{
+            width:340px;
+            height:560px;
+            background-color: white;
+            padding:10px;
+        }
+        .image42{
+            background-color: #ffd936;
+        }
+        .image43{
+            background-color: #eebea7;
+        }
+        .page42 ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .page42 h2{
+            margin-left:40px;
+        }
+        .page42 li{
+            padding:5px;
+        }
+        .page42 p{
+            margin-left:10px;
+            word-spacing: 2px;
+        }
+        .app{
+            position: fixed;
+            width: 60px;
+            height:60px;
+            bottom:40px;
+            right:50px;
+            color:#FFF;
+            border-radius:20px;
+            text-align:center;
+            font-size:30px;
+            z-index: 100;
+        }
+        .bars{
+            margin:0;
+            width:40px;
+            height:40px;
+            background-color: #f3df11;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border-style:dotted;
+            border-width: 1px;
+            border-color: white;
+            color: white;
+        }
+       /* @media only screen and (min-width:1171px){
+            .bars{
+                display: none;
+            }
+        }
+        @media only screen and (max-width:1170px) and (min-width:720px){
+              .tags{
+                display: none;
+              }
+              body{
+                width:913px;
+                overflow-x:hidden;
+              }
+              html{
+                width:100%;
+                overflow-x: hidden;
+              }
+              .bars{
+                margin:0;
+                margin-right:50px;
+                margin-top:40px;
+              }
+              .page1{
+                width:913px;
+                background: url(https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+              .page12{
+                width:95%;
+              }
+              .page13{
+                width:100%;
+              }
+              .page2{
+                width:913px;
+              }
+              .image2{
+                width:100%;
+              }
+              .image2 img{
+                max-width:750px;
+                height:200px;
+                margin-left:-30px;
+              }
+              .page3{
+                width:913px;
+              }
+              .page3 h1{
+                font-size:54px;
+              }
+              .page3 p{
+                font-size:15px;
+              }
+              .page4{
+                width:913.4px;
+              }
+              .page42{
+                width:100%;
+              }
+              .image41,.image42,.image43{
+                width:260px;
+              }
+              .image41 img,.image42 img,.image43 img{
+                width:95%;
+              }
+     }*/
+    </style>
+    <div class="page1">
+        <div class="page12">
+            <div clas="logo">
+                <img src="http://www.hanvis.in/wp-content/uploads/2023/05/Hanvs-1-117x117.png" width="117px" height="117px" style="margin-left:50px">
+            </div>
+            <div class="bars" >
+            <i class="fa fa-bars" style="overflow: auto;" onclick="tags()"></i>
+            </div>
+            <div class="tags">
+                <ul style="list-style-type: none;">
+                    <a href="#" ><li>Home</li></a>
+                    <a href="#" ><li>Contact</li></a>
+                    <a href="#" ><li>Services</li></a>
+                    <a href="#" ><li>Contact</li></a>
+                </ul>
+                <div class="call">
+                    <a href="tel:918309112877">+918309112877</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page0" id="page0" style="display: none;">
+            <ul>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1169"><a href="http://www.hanvis.in/about/" class="menu-link">Home</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1170"><a href="http://www.hanvis.in/about/" class="menu-link">About</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1172"><a href="http://www.hanvis.in/services/" class="menu-link">Services</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1171"><a href="http://www.hanvis.in/contact/" class="menu-link">Contact</a></li>
+            </ul>
+        </div>
+        <script>
+            
+        </script>
+        <style>
+            .page0{
+                margin:0;
+                width:800px;
+                height:210px;
+                background-color: white;
+            }
+            .page0 ul{
+                display: inline;
+                color:#cb8585;
+            }
+            .page0 a{
+                text-decoration: none;
+            }
+            .page0 li{
+                list-style-type: none;
+                padding:8px;
+                background-color: #e4c425;
+                border-style: dotted;
+                border-width: -10px;
+                margin:5px;
+            }
+        </style>
+        <div class="page13">
+            <h1>we all love</h1>
+            <span class="pets">pets</span>
+            <p style="margin:0">Look deep into nature, and you will<br/>
+                understand everything better.</p>
+            <a href="#"><span class="get">Get Started</span></a>
+        </div>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=918309112877" class="my-app"><img src="data:image/jpeg;base64,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" class="app"></a>
+    <div class="page2">
+        <div class="image2">
+            <img src="http://www.hanvis.in/wp-content/uploads/2023/05/gallery-banner-2000x400-1-1024x205.jpeg" loading="lazy">
+        </div>
+    </div>
+    <div class="page3">
+        <div class="page31">
+            <h1>Welcome to Hanvi's</h1>
+            <p>HANVI'S is a full-service veterinary clinic Dedicated to providing High-quality medical care for pets in Hyderabad. Our<br/> clinic is staffed by a team of experienced veterinarians, veterinary technicians, and support staff who are passionate<br/>about animal health and well-being.</p>
+        </div>
+    </div>
+    <div class="page4">
+        <div class="page41">
+            <h1>Our Services</h1>
+            <center><div class="line"></div></center>
+        </div>
+        <div class="page42">
+           <div class="image41">
+                <img src="http://www.hanvis.in/wp-content/uploads/elementor/thumbs/VET-0593-www-oct-Comms18-b-dog-q5yqx9v052kzxcl9xz3susisd79h7y7n75fnacao1w.jpeg" width="340px" height="310px">
+                <h2>MEDICAL SERVICES</h2>
+                <ul  style="list-style-type: none;">
+                    <li>General Checkups</li>
+                    <li>Vaccination</li>
+                    <li>Dermatology Problems</li>
+                    <li>Minor and SoftTissue Surgeries</li>
+                    <li>Inpatient</li>
+                </ul>
+           </div>
+           <div class="image42">
+                <img src="http://www.hanvis.in/wp-content/uploads/2023/05/Best-Practices-for-Animal-Care-on-Film-Sets-490x375-1.jpeg" width="340px" height="260px">
+                <h2>FOOD</h2>
+                <ul>
+                    <li>Pedigree.…</li>
+                    <li>Farmina.…</li>
+                    <li>Acana.…</li>
+                    <li>Orijen.…</li>
+                    <li>Little Big Paw.…</li>
+                    <li>Schier.</li>
+                </ul>
+            </div>
+            <div class="image43">
+                  <img src="http://www.hanvis.in/wp-content/uploads/2023/05/SPR-Pets-v2-The-6-Best-Places-to-Buy-Pet-Medication-Online-in-2021-4772668-final-01-9fa83886a1d9452cab1d4f4416430ee3-43fe3feaf268441c9b1b8cf910a4fae7.jpeg" width="340px" height="230px">
+                  <h2>PHARMACY</h2>
+                  <p>Carprofen (Rimadyl, Vetprofen) Deracoxib<br/> (Deramaxx) Firocoxib (Previcox) Grapiprant<br/> (Galliprant) Meloxicam.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page5">
+        <center><div class="page50">
+            <div class="page51"></div>
+        </div>
+        <div class="page52">
+            <div class="page53">
+               <img src="http://www.hanvis.in/wp-content/uploads/2023/05/senapati-dog-combo-pack-of-harness-neck-coller-belt-and-lease-set-x-blue-small-product-images-orvag7euahy-p597561002-0-202301140428.jpeg" width="340px" height="320px">
+               <h1>ACCESSORIES</h1>
+               <p>Bowls. ... Puppy crates, play pens and child gates. ... Clothing. ... Collars. ... Car harness, travelling crate or dog guard. ... Identity tag. ... Leads.</p>
+            </div>
+            <div class="page54">
+                <img src="http://www.hanvis.in/wp-content/uploads/2023/05/60592450_2088061068158346_4442532227577806848_n.jpeg" width="340px" height="250px">
+                <h1>GROOMING & BATHING</h1>
+                <p>Bathing accomplishes the basic tasks of cleaning your pet's coat and trimming nails and cleaning ears. While a good bath goes a long way, grooming provides those extra measures designed to really pamper your pet. Grooming also provides services not available with a traditional bath.</p>
+            </div>
+            <div class="page55">
+                <img src="http://www.hanvis.in/wp-content/uploads/2023/05/Home-delivery.jpeg" width="340px" height="250px">
+                <h1>OTHERS</h1>
+                <p>Shop everything pets need like food, treats and toys with FREE shipping over . Our services include dog wash, grooming, adoption.</p>
+            </div>
+        </div></center>
+    </div>
+    <div class="page6">
+        <div class="image61">
+            <img src="http://www.hanvis.in/wp-content/uploads/2023/05/Untitled-design-15-1024x1024.png" width="540px" height="540px">
+        </div>
+        <div class="page62">
+            <h1>Yashasvi Reddy.P<br/>B.V.sc & A.H (PGDIP)</h1>
+            <p><span>Y</span>ashasvi Reddy.P is dedicated to staying up-to-date with the latest developments in veterinary medicine. We believe that continuing education and professional development are essential to providing the best possible care to our pets.</p>
+            <p>>Hanvi's clinic, we believe in building strong relationships with our clients and their pets. We take the time to listen to our clients’ concerns and provide personalized advice and recommendations to help them make informed decisions about their pet's care.</p>
+            <p>Thank you for considering HANVI’S for your pet’s healthcare needs. We look forward to welcoming you and your pet to our clinic and providing you with the highest quality of care.</p>
+        </div>
+    </div>
+    <div class="page7">
+        <div class="page71">
+            <h1>What Our Loved clients say</h1>
+        </div>
+        <div class="page72">
+            <div class="page721">
+                <p>"I recently took my beloved dog to HANVI'S Pet Clinic for a routine check-up, and I was blown away by the level of care and attention that he received. The staff was friendly and welcoming, and the clinic itself was clean and well-maintained.</p>
+                <h4>Kavya</h4>
+                <h6>Designation</h6>
+            </div>
+            <div class="page722">
+                <p>The veterinary doctor who examined my dog was thorough and knowledgeable, taking the time to answer all of my questions and explain everything that she was doing. she was genuinely caring and compassionate towards my pet, making sure that he was comfortable and at ease throughout the examination.</p>
+                <h4>Mithil</h4>
+                <h6>Software Engineer</h6>
+            </div>
+        </div>
+        <div class="page73">
+            <div class="page731">
+                <p>I was also impressed by the range of services that HANVI'S offers, from preventive care to emergency services. It was reassuring to know that my pet was in good hands and that the clinic was equipped to handle any medical needs that may arise.</p>
+                <h4>Bhuvan</h4>
+                <h6>Realtor</h6>
+            </div>
+            <div class="page732">
+                <p>Overall, I would highly recommend Yashasvi Reddy to anyone looking for quality veterinary care for their pets. The level of professionalism and expertise demonstrated by the staff was truly exceptional, and I am grateful for the peace of mind that comes with knowing that my pet is in the best possible hands."</p>
+                <h4>Krishna Naidu</h4>
+                <h6>Media</h6>
+            </div>
+        </div>
+    </div>
+    <div class="page8">
+
+    </div>
+    <div class="page10">
+         <center><div class="page101">
+            <div class="page102"></div>
+          </div>
+          <div class="page103">
+            <h1>Thank you for considering HANVI'S for your pet's healthcare needs.</h1>
+            <button>Call To Action</button>
+          </div></center>
+    </div>
+    <div class="page11">
+        <div class="page112">
+            <h5>CONTACT</h5>
+            <h1>+918309112877</h1>
+            <h3>8-3-167/D/7/4/C OPPOSITE CENTRAL BANK KALYAN<br/> NAGAR PHASE I, Hyderabad ,Telangana 500038</h3>
+        </div>
+        <div class="page113">
+            <iframe src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&#038;t=m&#038;z=18&#038;output=embed&#038;iwloc=near" width="700px" height="400px">
+
+            </iframe>
+        </div>
+        <div class="page114">
+            <a href="#" class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-grow elementor-repeater-item-9c86cde"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </div>
+    <div class="page121">
+        <div class="page122">
+            <ul>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>About</li></a>
+                <a href=""><li>Services</li></a>
+                <a href=""><li>Contact</li></a>
+            </ul>
+        </div>
+        <div class="page123">
+            <img src="http://www.hanvis.in/wp-content/uploads/2023/05/Hanvs-1-117x117.png" width="125px" height="125px">
+        </div>
+    </div>
+    <style>
+        .page5{
+            width:100vw;
+            height:750px;
+            background-color: #9e99a4;
+        }
+        .page51{
+            width:100px;
+            height:3px;
+            background-color: #f3df11;
+        }
+        .page50{
+            padding:50px;
+        }
+        .page52{
+            width:1100px;
+            height:600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page53,.page54,.page55{
+            width:340px;
+            height:500px;
+            padding:10px;
+        }
+        .page53{
+            background-color: #2b306e;
+            color:white;
+        }
+        .page54{
+            background-color: #7c608f;
+            color:white;
+        }
+        .page55{
+            background-color: #74b41d;
+        }
+        .page6{
+            width:100vw;
+            height:560px;
+            background-color: #6EC1E4;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .image61{
+            padding:10px;
+            margin-right:20px;
+        }
+        .page62 h1{
+            font-size: 30px;
+            font-family: "Poppins",sans-serif;
+            color:#f3df11;
+            font-weight: 900;
+        }
+        .page62 p{
+            width:500px;
+            font-size: 20px;
+            font-family: "Alata", sans-serif;
+            color:white;
+            font-weight: 500;
+        }
+        .page62 span{
+        font-size:40px;
+        font-weight: 900;
+        }
+        .page7{
+            width:100vw;
+            height:1000px;
+            background-color: #121a23;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .page71 h1{
+              font-size:46px;
+              font-family:"Abril Fatface",sans-serif;
+              font-weight:900;
+              color:#e4c425;
+        }
+        .page721,.page722,.page731,.page732{
+            width:400px;
+            height:210px;
+            background-color: white;
+            margin:20px;
+            padding:50px;
+            font-size:16px;
+            font-family: "lato",sans-serif;
+            border-radius: 10px;
+        }
+        .page72{
+            display: flex;
+            padding:20px;
+        }
+        .page73{
+            display: flex;
+        }
+        .page72 p,h4,h6{
+            opacity:0.5;
+        }
+        .page73 p,h4,h6{
+            opacity:0.5;
+        }
+        .page72 h6,.page73 h6{
+            margin-top:-15px;
+        }
+        .page8{
+            width:100vw;
+            height:100px;
+            background-color: white;
+        }
+        .page10{
+            width:100vw;
+            height:300px;
+            background-color: #212121;
+        }
+        .page102{
+            width:100px;
+            height:3px;
+            background-color: #f3df11;
+        }
+        .page101{
+            padding:40px;
+        }
+        .page10 h1{
+            width:700px;
+            color:white;
+            font-size: 30px;
+            font-family: "Poppins",sans-serif;
+            font-weight: 900;
+        }
+        .page10 button{
+            padding:17px 34px;
+            background-color: #f3df11;
+            border: 0;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: sans-serif;
+            opacity:0.9;
+        }
+        .page10 button:hover{
+            opacity:0.7;
+        }
+        .page11{
+            width:100vw;
+            height:800px;
+            background: #000000;
+            color:white;
+        }
+        .page112{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .page112 h5{
+            font-size: 12px;
+            font-family: "Poppins",sans-serif;
+            font-weight: 900;
+            letter-spacing: 12px;
+            margin-top:50px;
+        }
+        .page112 h1{
+            font-size: 40px;
+            font-family: "Poppins",sans-serif;
+            font-weight: 900;
+        }
+        .page112 h3{
+            font-size: 18px;
+            font-family: "Poppins",sans-serif;
+            font-weight: 900;
+            margin-top:-20px;
+        }
+        .page113{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page114{
+            width:700px;
+            height:50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:333px;
+            margin-top:60px;
+        }
+        .page114 i{
+            font-size: 25px;
+            padding:30px;
+            color:grey;
+        }
+        .page114 i:hover{
+            font-size: 30px;
+            color:green;
+        }
+        .page121{
+            width:100vw;
+            height:100px;
+            background-color: #120101;
+            display: flex;
+        }
+        .page122 a{
+            text-decoration: none;
+            list-style-type: none;
+            color:#536942;
+        }
+        .page122 li{
+            padding:20px;
+            margin-top:10px;
+        }
+        .page123 img{
+            margin-left:100%;
+            margin-top:-30px;
+        }
+       /* @media only screen and (max-width:1170px) and (min-width:720px){
+            .page5{
+                width:913px;
+            }
+            .page52{
+                width:100%;
+            }
+            .page53,.page54,.page55{
+                width:230px;
+                margin-right:40px;
+            }
+            .page54{
+                font-size:14px;
+            }
+            .page55{
+                margin-right:20px;
+            }
+            .page53 img,.page54 img,.page55 img{
+                width:95%;
+            }
+            .page6{
+                width:913.3px;
+            }
+            .image61 img{
+                width:100%;
+            }
+            .page62{
+                width:80%;
+            }
+            .page7{
+                width:913px;
+            }
+            .page721,.page722,.page731,.page732{
+                width:100%;
+            }
+            .page8{
+                max-width:913px;
+            }
+            .page10{
+                max-width:913px;
+            }
+            .page11{
+                max-width:913px;
+            }
+            .page114{
+                max-width:30%;
+            }
+            .page121{
+                max-width:913px;
+            }
+            .app{
+                position: fixed;
+                bottom:30%;
+                left:70%;
+            }
+        }*/
+        @media only screen and (max-width:360px){
+             body{
+                width:360px;
+             }
+             .tags{
+                display: none;
+             }
+             .page1{
+                width:335%;
+             }
+             .page12{
+                width:94%;
+             }
+             .bars{
+                margin-top:30px;
+             }
+             .page2{
+                width:335%;
+             }
+             .page3{
+                width:335%;
+                height:300px;
+                
+             }
+             .page3 p{
+                width:60%;
+                margin-left:250px;
+             }
+             .page4,.page5,.page6,.page7,.page8,.page10,.page11,.page121{
+                width:335%;
+             }
+        }
+    </style>
+</body>
+</html>
