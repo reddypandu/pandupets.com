@@ -214,20 +214,21 @@
             color: white;
         }
         @media only screen and (max-width:360px){
-             body{
+             html,body{
                 margin:0;
-                min-width:360px;
+                max-width:290px;
                 overflow-x: hidden;
+                box-sizing: border-box;
              }
              .tags{
                 display: none;
              }
              .page1{
-                width:360px;
+                width:290px;
                 height:450px;
              }
              .page12{
-                width:85%;
+                width:100%;
                 margin-left:-50px;
                 display: flex;
                 justify-content: space-between;
@@ -242,48 +243,52 @@
              }
              .page13{
                 width:100%;
-                margin-left:-30px;
+                margin-left:1px;
              }
              .page2{
-                width:100%;
+                max-width:290px;
                 height:180px;
              }
-             .image2 img{
+             .image2{
+                padding:0;
                 width:280px;
+             }
+             .image2 img{
+                max-width:270px;
                 height:120px;
-                margin-left:-115px;
+                margin-left:8px;
              }
              .page3{
-                width:360px;
+                width:290px;
                 height:150px;
              }
              .page31 h1{
                 font-size:26px;
-                margin-left:-50px;
+                margin-left:-10px;
              }
              .page31 p{
                 font-size:10px;
-                width:250px;
-                margin-left:-50px;
+                width:280px;
+                margin-left:10px;
              }
              .page31 br{
                 display: none;
              }
              .page4{
-                width:360px;
+                width:290px;
                 height:1550px;
              }
              .page41 {
                width:80%;
              }
              .page41 h1{
-                margin-left:-20px;
-                font-size: 40px;
+                margin-left:20px;
+                font-size: 30px;
             }
             .image41,.image42,.image43{
                 width:240px;
                 height:500px;
-                margin-left:-60px;
+                margin-left:5px;
                 margin-bottom:20px;
             }
             .image41{
@@ -299,18 +304,18 @@
                 flex-direction: column;
              }
              .page5{
-                width: 100%;
+                max-width:290px;
                 height:1000px;
              }
              .line{
-                margin-left:-60px;
+                margin-left:-10px;
              }
              .page5{
                 width:360px;
                 min-height:1450px;
              }
              .page51{
-                margin-left:-60px;
+                margin-left:10px;
              }
              .page52{
                 max-width:360px;
@@ -329,20 +334,20 @@
                 height:180px;
              }
              .page6{
-                width:360px;
-                min-height:1000px;
+                max-width:290px;
+                min-height:920px;
                 display: unset;
              }
              .image61 img{
                 margin:0;
-                margin-left:-90px;
+                margin-left:-5px;
                 width:270px;
                 height:300px;
              }
              .page62{
                 margin:0;
                 margin-top:330px;
-                margin-left:-300px;
+                margin-left:-310px;
              }
              .page6 .p62{
                 max-width:250px;
@@ -350,21 +355,25 @@
              }
              .page6 .pp{
                 margin:0;
-                max-width:260px;
-                font-size: 18px;
+                max-width:280px;
+                font-size: 17px;
              }
              .page7{
-                width:100%;
+                max-width:290px;
                 min-height:1150px;
              }
              .page71 .h{
                 font-size: 18px;
-                margin-left:-59px;
+                margin-left:-10px;
              }
              .page72,.page73 {
+                max-width:250px;
                 display: flex;
                 flex-direction: column;
-                margin-left:-70px;
+                margin-left:-50px;
+             }
+             .page72{
+                padding:-20px;
              }
              .page721,.page722,.page731,.page732{
                 max-width:160px;
@@ -380,21 +389,21 @@
                 margin-top:-20px;
              }
              .page8{
-                width:360px;
+                max-width:290px;
              }
              .page10{
-                width:360px;
+                max-width:290px;
                 max-height:240px;
              }
              .page102{
-                margin-left:-85px;
+                margin-left:-10px;
              }
              .page103 .p103{
-                width:360px;
+                width:280px;
                 font-size:15px;
              }
              .page103{
-                margin-left:-73px;
+                margin-left:5px;
              }
              .page103 button{
                 padding:0;
@@ -403,19 +412,19 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top:40px;
+                margin-top:30px;
              }
              .page11{
-                width:100%;
+                max-width:290px;
                 max-height:650px;
              }
              .page112 h5{
-                 margin-left:-45px;
+                 margin-left:10px;
                  color:#f3df11
              }
              .page11 .a{
                 font-size: 25px;
-                margin-left:-55px;
+                margin-left:-17px;
              }
              .b br{
                 display: none;
@@ -423,14 +432,14 @@
              .page11 .b{
                 width:270px;
                 font-size: 14px;
-                margin-left:-50px;
+                margin-left:20px;
                 margin-top:18px;
                 color:#74b41d;
              }
              iframe{
                 width:260px;
                 height:250px;
-                margin-left:-70px;
+                margin-left:5px;
              }
              .page11 .page114{
                 max-width:200px;
@@ -440,13 +449,13 @@
                 margin-left:-35px;
              }
              .page121{
-                width:100%;
+                max-width:290px;
                 min-height:400px;
                 display: flex;
                 flex-direction: column;
              }
              .page122{
-                margin-left:-55px;
+                margin-left:-10px;
              }
              .page122 ul{
                 display: flex;
