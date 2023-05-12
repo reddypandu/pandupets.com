@@ -261,11 +261,42 @@
              html,body{
                 margin:0;
                 max-width:360px;
-                overflow-x:hidden;
+                overflow-x: hidden;
+                
              }
-             .tags{
+             .tags ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .tags{
+                position: absolute;
+                width:80px;
+                top:10%;
+                left:75%;
+                height:300px;
+                background:#f3df11;
+                margin-top:-900px;
+                transition: all 0.5s ease;
+                border-radius: 50px;
+                animation:none;
+                text-align: center;
+            }
+            #bars{
+            position: absolute;
+            top:0;
+            left:95%;
+        }
+            .tags li{
+                margin:30px auto;
+                color:whitesmoke;
+            }
+            .call{
                 display: none;
-             }
+            }
+            .mobile-menu{
+                margin-top:0px;
+            }
              .page1{
                 width:360px;
                 height:450px;
@@ -283,7 +314,7 @@
              }
              .bars{
                 margin:0;
-                margin-left:-110px;
+                margin-left:-30px;
                 margin-top:20px;
              }
              .page13{
@@ -523,6 +554,9 @@
                 top:70%;
                 left:80%;
              }
+        }
+        @media only screen and (max-width:720px) and (min-width:360px){
+
         }
        
     </style>
