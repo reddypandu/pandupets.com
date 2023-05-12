@@ -23,6 +23,17 @@
             height:625px;
             background-color: pink;
         }
+        .page12 img{
+            animation: r 5s linear 0.1s 1;
+        }
+        @keyframes r{
+            from{
+                margin-left:-100px;
+            }
+            to{
+                margin-left:0px;
+            }
+        }
         .page12{
             display: flex;
             justify-content: space-between;
@@ -34,6 +45,15 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            animation: a 5s linear 0.1s 1;
+       }
+       @keyframes a{
+        from{
+            margin-top:-200px;
+        }
+        to{
+            margin-top:0px;
+        }
        }
         ul{
             display: flex;
@@ -51,6 +71,19 @@
            justify-content: center;
            align-items: center;
            color:white;
+           animation-name: p;
+           animation-duration: 5s;
+           animation-iteration-count: 1;
+           transition: transform 0.5s ease;
+        }
+        @keyframes p{
+            from{
+                transform: scale(2);
+            }
+            to {
+                
+                transform: scale(1);
+            }
         }
         .page13 h1{
             margin:0;
@@ -198,6 +231,17 @@
             text-align:center;
             font-size:30px;
             z-index: 100;
+            animation: w 5s linear 0.5s 1;
+        }
+        @keyframes w{
+            from{
+                margin-bottom:-100px;
+                width:0px;
+            }
+            to{
+                margin-bottom:0px;
+                width:50px;
+            }
         }
         .bars{
             margin:0;
@@ -216,19 +260,18 @@
         @media only screen and (max-width:360px){
              html,body{
                 margin:0;
-                max-width:290px;
-                overflow-x: hidden;
-                box-sizing: border-box;
+                max-width:360px;
+                
              }
              .tags{
                 display: none;
              }
              .page1{
-                width:290px;
+                width:360px;
                 height:450px;
              }
              .page12{
-                width:100%;
+                width:360px;
                 margin-left:-50px;
                 display: flex;
                 justify-content: space-between;
@@ -240,13 +283,15 @@
              }
              .bars{
                 margin:0;
+                margin-left:-110px;
+                margin-top:20px;
              }
              .page13{
-                width:100%;
+                width:360px;
                 margin-left:1px;
              }
              .page2{
-                max-width:290px;
+                max-width:360px;
                 height:180px;
              }
              .image2{
@@ -259,7 +304,7 @@
                 margin-left:8px;
              }
              .page3{
-                width:290px;
+                width:360px;
                 height:150px;
              }
              .page31 h1{
@@ -275,7 +320,7 @@
                 display: none;
              }
              .page4{
-                width:290px;
+                width:360px;
                 height:1550px;
              }
              .page41 {
@@ -304,7 +349,7 @@
                 flex-direction: column;
              }
              .page5{
-                max-width:290px;
+                max-width:360px;
                 height:1000px;
              }
              .line{
@@ -318,7 +363,7 @@
                 margin-left:10px;
              }
              .page52{
-                max-width:360px;
+                max-width:290px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -326,7 +371,7 @@
              }
              .page53,.page54,.page55{
                 max-width:240px;
-                margin-left:-70px;
+                margin-left:10px;
                 margin-top:20px;
              }
              .page53 img,.page54 img,.page55 img{
@@ -334,20 +379,19 @@
                 height:180px;
              }
              .page6{
-                max-width:290px;
-                min-height:920px;
-                display: unset;
+                max-width:360px;
+                min-height:820px;
              }
              .image61 img{
                 margin:0;
-                margin-left:-5px;
-                width:270px;
+                margin-left:10px;
+                width:250px;
                 height:300px;
              }
              .page62{
                 margin:0;
                 margin-top:330px;
-                margin-left:-310px;
+                margin-left:-300px;
              }
              .page6 .p62{
                 max-width:250px;
@@ -356,10 +400,10 @@
              .page6 .pp{
                 margin:0;
                 max-width:280px;
-                font-size: 17px;
+                font-size: 15px;
              }
              .page7{
-                max-width:290px;
+                max-width:360px;
                 min-height:1150px;
              }
              .page71 .h{
@@ -389,10 +433,10 @@
                 margin-top:-20px;
              }
              .page8{
-                max-width:290px;
+                max-width:360px;
              }
              .page10{
-                max-width:290px;
+                max-width:360px;
                 max-height:240px;
              }
              .page102{
@@ -415,7 +459,7 @@
                 margin-top:30px;
              }
              .page11{
-                max-width:290px;
+                max-width:360px;
                 max-height:650px;
              }
              .page112 h5{
@@ -446,10 +490,11 @@
                 margin-left:60px;
              }
              .page114 i{
-                margin-left:-35px;
+                padding:0;
+                margin-left:-50px;
              }
              .page121{
-                max-width:290px;
+                max-width:360px;
                 min-height:400px;
                 display: flex;
                 flex-direction: column;
@@ -486,15 +531,15 @@
             <div clas="logo">
                 <img src="http://www.hanvis.in/wp-content/uploads/2023/05/Hanvs-1-117x117.png" width="117px" height="117px" style="margin-left:50px">
             </div>
-            <div class="bars" >
+            <div class="bars" id="bars">
             <i class="fa fa-bars" onclick="tags()"></i>
             </div>
             <div class="tags">
                 <ul style="list-style-type: none;">
-                    <a href="#" ><li>Home</li></a>
-                    <a href="#" ><li>Contact</li></a>
-                    <a href="#" ><li>Services</li></a>
-                    <a href="#" ><li>Contact</li></a>
+                    <li><a href="#" ></a>Home</li>
+                    <li><a href="#" ></a>Contact</li>
+                    <li><a href="#" ></a>Services</li>
+                    <li><a href="#" ></a>Contact</li>
                 </ul>
                 <div class="call">
                     <a href="tel:918309112877">+918309112877</a>
@@ -789,6 +834,10 @@
             font-size:16px;
             font-family: "lato",sans-serif;
             border-radius: 10px;
+            transition: transform 1s ease;
+        }
+        .page721:hover,.page722:hover,.page731:hover,.page732:hover{
+            transform: rotate(-360deg);
         }
         .page72{
             display: flex;
@@ -916,6 +965,55 @@
             margin-left:100%;
             margin-top:-30px;
         }
+        img{
+            transition: transform 0.3s ease;
+        }
+        img:hover{
+            transform:scale(1.1);
+        }
+        @media only screen and (max-width:1090px) and (min-width:720px){
+            .tags ul{
+                display: flex;
+                flex-direction: column;
+            }
+            .tags{
+                position: absolute;
+                width:100px;
+                top:0;
+                left:85%;
+                height:400px;
+                background: red;
+                margin-top:-900px;
+                transition: all 0.5s ease;
+                border-radius: 50px;
+                border-style: groove;
+                border-width: 10px;
+                border-color: aqua;
+            }
+            #bars{
+            position: absolute;
+            top:0;
+            left:95%;
+        }
+            .tags li{
+                margin:30px auto;
+                color:whitesmoke;
+            }
+            .call{
+                display: none;
+            }
+            .mobile-menu{
+                margin-top:0px;
+            }
+        }
     </style>
+    <script>
+        const menubtn=document.querySelector(".bars");
+        const tag=document.querySelector(".tags");
+
+        menubtn.addEventListener('click',()=>{
+            tag.classList.toggle('mobile-menu');
+        })
+    </script>
 </body>
 </html>
