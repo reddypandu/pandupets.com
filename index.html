@@ -551,10 +551,176 @@
                 left:80%;
              }
         }
-        @media only screen and (max-width:720px) and (min-width:360px){
-
+        @media  screen and (min-width:361px) and (max-width:720px){
+                body{
+                    width:720px;
+                    overflow-x: hidden;
+                }
+                .tags ul{
+                padding:0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .tags{
+                position: absolute;
+                width:80px;
+                top:10%;
+                left:75%;
+                height:300px;
+                background:#f3df11;
+                margin-top:-900px;
+                transition: all 0.5s ease;
+                border-radius: 50px;
+                animation:none;
+                text-align: center;
+            }
+            #bars{
+            top:0;
+            left:10%;
         }
-       
+            .tags li{
+                margin:30px auto;
+                color:whitesmoke;
+                margin-left:-20px;
+            }
+            .call{
+                display: none;
+            }
+            .mobile-menu{
+                margin-top:0px;
+            }
+                .bars{
+                    margin-top:60px;
+                }
+                .page1{
+                    max-width:720px;
+                    height:500px;
+                }
+                .page12{
+                    max-width:680px;
+                }
+                .page2{
+                    max-width:720px;
+                }
+                .page2 img{
+                    width:600px;
+                    height:200px;
+                    margin-left:240px;
+                }
+                .page2 .image2{
+                    margin-left: -300px;
+                }
+                .page3,.page4,.page5,.page6,.page7,.page8,.page10,.page11,.page121{
+                    width:720px;
+                }
+                .page31 h1{
+                    font-size: 45px;
+                }
+                .page31 p{
+                    width:700px;
+                    text-align: center;
+                }
+                .page4{
+                    height:1950px;
+                }
+                .page42{
+                    margin-bottom: 600px;
+                    flex-direction: column;
+                }
+                .page42 .image43{
+                    min-height: 530px;
+                }
+                .image43 p{
+                    padding: 20px;
+                    font-size: 20px;
+                }
+                .page5{
+                    min-height: 1680px;
+                }
+                .page52{
+                    flex-direction: column;
+                    margin-top: 480px;
+                    margin-left:-200px;
+                }
+                .page55{
+                    min-height:500px;
+                }
+                .page55 p{
+                    font-size: 20px;
+                    padding:10px;
+                }
+                .page6{
+                    min-height: 1400px;
+                    flex-direction: column;
+                }
+                .image61{
+                    max-height:500px;
+                    margin-top:20px;
+                }
+                .image61 img{
+                    max-width:550px;
+                    height:550px;
+                }
+                .page62{
+                    max-height: 750px;
+                    margin-top: 600px;
+                    margin-left: -550px;
+                    padding:-20px;
+                }
+                .page62 .p62{
+                    font-size: 45px;
+                }
+                .page62 .pp{
+                    font-size: 25px;
+                }
+                .page7{
+                    min-height: 1700px;
+                }
+                .page71 .h{
+                    font-size: 40px;
+                }
+                .page72,.page73{
+                    flex-direction: column;
+                }
+                .page113 iframe{
+                    width:650px;
+                    height:410px;
+                }
+                .page11 .page114{
+                   margin-left:20px;
+                }
+                .page121{
+                    min-height: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: ;
+                    align-items: center;
+                }
+                .page122{
+                    height:300px;
+                }
+                .page122 ul{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .page122 li{
+                    font-size: 21px;
+                }
+                .page123{
+                    height: 200px;
+                }
+                .page123 .img12{
+                    margin:0;
+                    width:210px;
+                    height:200px;
+                }
+                .app{
+                    top:50%;
+                    left:70%;
+                }
+        }
     </style>
     <div class="page1">
         <div class="page12">
@@ -1001,7 +1167,7 @@
         img:hover{
             transform:scale(1.1);
         }
-        @media only screen and (max-width:1090px) and (min-width:720px){
+        @media only screen and (min-width:1090px){
             .tags ul{
                 display: flex;
                 flex-direction: column;
