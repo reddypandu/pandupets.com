@@ -78,7 +78,7 @@
         }
         @keyframes p{
             from{
-                transform: scale(2);
+                transform: scale(1.5);
             }
             to {
                 
@@ -551,10 +551,10 @@
                 left:80%;
              }
         }
-        @media  screen and (min-width:361px) and (max-width:720px){
+        @media only screen and (min-width:361px) and (max-width:720px){
                 body{
-                    width:720px;
-                    overflow-x: hidden; 
+                  max-width:720px;
+                  overflow-x: hidden;
                 }
                 .tags ul{
                 padding:0;
@@ -594,11 +594,14 @@
                     margin-top:60px;
                 }
                 .page1{
-                    width:910px;
+                    max-width:960px;
                     height:500px;
                 }
                 .page12{
-                    width:880px;
+                    max-width:680px;
+                }
+                .page13{
+                    max-width:355px;
                 }
                 .page2{
                     max-width:720px;
@@ -613,9 +616,37 @@
                     margin-left: -300px;
                 }
                 .page3,.page4,.page5,.page6,.page7,.page8,.page10,.page11,.page121{
-                    width:720px;
+                    max-width:720px;
                 }
-                .page31 h1{
+                .app{
+                    left:50%;
+                }
+                .page42,.page52{
+                    flex-direction: column;
+                }
+                .page42{
+                    width:700px;
+                }
+                .page52{
+                    max-width:500px;
+                }
+                .page11 .page114{
+                    width:100px;
+                }
+                .page72,.page73{
+                    flex-direction: column;
+                }
+                .image61 img{
+                    width:50px;
+                    height:50px;
+                }
+                .page62{
+                    width:100px;
+                }
+                .page62 .pp{
+                    width:100px;
+                }
+                /*.page31 h1{
                     font-size: 45px;
                 }
                 .page31 p{
@@ -720,7 +751,8 @@
                 .app{
                     top:50%;
                     left:70%;
-                }
+                    animation: none;
+                }*/
         }
     </style>
     <div class="page1">
