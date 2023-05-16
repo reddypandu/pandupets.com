@@ -201,6 +201,15 @@
             height:560px;
             background-color: white;
             padding:10px;
+            animation: s 5s linear 0.1s 1;
+        }
+        @keyframes s{
+            from{
+                margin-left:-800px;
+            }
+            to{
+                margin-left:0px;
+            }
         }
         .image42{
             background-color: #ffd936;
@@ -276,8 +285,8 @@
             .tags{
                 position: absolute;
                 width:80px;
-                top:15%;
-                left:75%;
+                margin-left:300px;
+                margin-bottom:-350px;
                 height:300px;
                 background:#f3df11;
                 margin-top:-900px;
@@ -565,12 +574,11 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
+              }
             .tags{
                 position: absolute;
                 width:80px;
-                top:10%;
-                left:75%;
+                margin-left:550px;
                 height:300px;
                 background:#f3df11;
                 margin-top:-900px;
@@ -582,7 +590,7 @@
             #bars{
             top:0;
             left:10%;
-        }
+           }
             .tags li{
                 margin:30px auto;
                 color:whitesmoke;
@@ -706,10 +714,39 @@
             body{
                 max-width:1170px;
             }
+            .tags ul{
+                padding:0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .tags{
-                animation: none;
-                margin-left:-80px;
+                position: absolute;
+                width:80px;
+                margin-left:1025px;
+                top:20%;
+                height:300px;
+                background:#f3df11;
+                margin-top:-900px;
+                transition: all 0.5s ease;
+                border-radius: 50px;
+                animation:none;
+                text-align: center;
+            }
+            #bars{
+            top:0;
+            left:10%;
+           }
+            .tags li{
+                margin:30px auto;
+                color:whitesmoke;
+                margin-left:-20px;
+            }
+            .call{
                 display: none;
+            }
+            .mobile-menu{
+                margin-top:0px;
             }
             .bars{
                 margin-left:-80px;
@@ -775,25 +812,25 @@
                 font-size: 1.8vmin;
             }
             .page4{
-                height:2500px;
+                height:2900px;
             }
             .page42{
                 flex-direction: column;
             }
             .image41,.image42,.image43{
-                width:500px;
-                min-height:700px;
+                width:800px;
+                min-height:850px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
             .image41 img,.image42 img,.image43 img{
-                width:470px;
-                height:450px;
+                width:750px;
+                height:560px;
             }
             .image41{
-                margin-top:-1540px;
+                margin-top:-2000px;
             }
             .image41 ul{
                 margin-left:80px;
@@ -803,14 +840,14 @@
                 font-size:20px;
             }
             .page5{
-                min-height:2350px;
+                min-height:2800px;
             }
             .page52{
                 flex-direction: column;
             }
             .page53,.page54,.page55{
-                min-width:500px;
-                min-height:700px;
+                min-width:800px;
+                min-height:850px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -818,11 +855,11 @@
                 font-size: 21px;
             }
             .page53 img,.page54 img,.page55 img{
-                width:470px;
-                height:470px;
+                width:750px;
+                height:550px;
             }
             .page53{
-                margin-top:1600px;
+                margin-top:2050px;
             }
             .page6{
                 min-height:1450px;
@@ -932,6 +969,11 @@
             }
 
         }
+        @media only screen and (min-width:1171px){
+            .bars{
+                display: none;
+            }
+        }
     </style>
     <div class="page1">
         <div class="page12">
@@ -945,7 +987,7 @@
                 <ul style="list-style-type: none;">
                     <li><a href="#" ></a>Home</li>
                     <li><a href="#" ></a>Contact</li>
-                    <li><a href="#" ></a>Services</li>
+                    <li><a href="#services" ></a>Services</li>
                     <li><a href="#" ></a>Contact</li>
                 </ul>
                 <div class="call">
@@ -1008,7 +1050,7 @@
             <p>HANVI'S is a full-service veterinary clinic Dedicated to providing High-quality medical care for pets in Hyderabad. Our<br/> clinic is staffed by a team of experienced veterinarians, veterinary technicians, and support staff who are passionate<br/>about animal health and well-being.</p>
         </div>
     </div>
-    <div class="page4">
+    <div class="page4" id="services">
         <div class="page41">
             <h1>Our Services</h1>
             <center><div class="line"></div></center>
@@ -1378,41 +1420,6 @@
         img:hover{
             transform:scale(1.1);
         }
-        @media only screen and (min-width:1090px){
-            .tags ul{
-                display: flex;
-                flex-direction: column;
-            }
-            .tags{
-                position: absolute;
-                width:100px;
-                top:0;
-                left:85%;
-                height:400px;
-                background: red;
-                margin-top:-900px;
-                transition: all 0.5s ease;
-                border-radius: 50px;
-                border-style: groove;
-                border-width: 10px;
-                border-color: aqua;
-            }
-            #bars{
-            position: absolute;
-            top:0;
-            left:95%;
-        }
-            .tags li{
-                margin:30px auto;
-                color:whitesmoke;
-            }
-            .call{
-                display: none;
-            }
-            .mobile-menu{
-                margin-top:0px;
-            }
-        }
     </style>
     <script>
         const menubtn=document.querySelector(".bars");
@@ -1421,6 +1428,23 @@
         menubtn.addEventListener('click',()=>{
             tag.classList.toggle('mobile-menu');
         })
+           /* function reveal() {
+            var reveals = document.querySelectorAll(".image41");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);*/
     </script>
 </body>
 </html>
