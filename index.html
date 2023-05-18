@@ -276,7 +276,7 @@
                 overflow-x: hidden;
              }
              #myVideo{
-                min-width:400px;
+                max-width:400px;
                 min-height:45vh;
                 object-fit: fill;
              }
@@ -575,7 +575,7 @@
                   overflow-x: hidden;
                 }
                 #myVideo{
-                min-width:720px;
+                max-width:720px;
                 min-height:50vh;
                 object-fit:fill;
                }
@@ -726,7 +726,7 @@
                 max-width:1170px;
             }
             #myVideo{
-                min-width:1170px;
+                max-width:1170px;
                 min-height:76vh;
                 object-fit:fill;
             }
@@ -980,9 +980,9 @@
             }
             .page123 .img12{
                 margin:0;
-                width:200px;
-                height:200px;
-                margin-top:-40px;
+                width:180px;
+                height:180px;
+                margin-top:-20px;
             }
 
         }
@@ -993,12 +993,12 @@
         }
         #myVideo{
             position: absolute;
-            max-width:100%;
+            width:1370px;
+            height:60vh;
             object-fit: fill;
             z-index:-1;
         }
     </style>
-    <!--<iframe class="video" width="560" height="315" src="images/video.mp4.mp4"  frameborder="0" allow="accelerometer; autoplay muted loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
     <div class="page1">
         <video autoplay muted loop id="myVideo">
             <source src="images/video.mp4.mp4" type="video/mp4">
@@ -1032,9 +1032,6 @@
                 <li class="m3nu-item menu-item-type-post_type menu-item-object-page menu-item-1171"><a href="http://www.hanvis.in/contact/" class="menu-link">Contact</a></li>
             </ul>
         </div>
-        <script>
-            
-        </script>
         <style>
             .page0{
                 margin:0;
@@ -1469,7 +1466,7 @@
             tag.classList.toggle('mobile-menu');
         })
            /* function reveal() {
-            var reveals = document.querySelectorAll(".image41");
+            var reveals = document.querySelectorAll(".reveal");
 
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
