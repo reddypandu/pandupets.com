@@ -78,11 +78,11 @@
            animation-name: p;
            animation-duration: 5s;
            animation-iteration-count: 1;
-           transition: transform 0.5s ease;
+           transition: transform 1s ease-in;
         }
         @keyframes p{
             from{
-                transform: scale(1.5);
+                transform: scale(0.4);
             }
             to {
                 
@@ -141,6 +141,16 @@
         .image2{
             width:1200px;
             padding-left:120px;
+            animation: i 0.5s linear 0.1s 1;
+        }
+        @keyframes i{
+            from{
+                margin-right:-700px;
+                transform:rotate(3deg);
+            }
+            to{
+                margin-right:0px;
+            }
         }
         .page3{
             width:1370px;
@@ -161,9 +171,10 @@
             font-weight: 700;
         }
         .page3 p{
-            font-size: 18px;
+            font-size: 20px;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
+            text-align: center;
         }
         .page4{
             width:1370px;
@@ -277,7 +288,7 @@
              }
              #myVideo{
                 max-width:400px;
-                min-height:450px;
+                max-height:450px;
                 object-fit: fill;
              }
              .tags ul{
@@ -301,9 +312,9 @@
                 text-align: center;
             }
             #bars{
-            top:0;
-            left:10%;
-           }
+                top:0;
+                left:10%;
+            }
             .tags li{
                 margin:30px auto;
                 color:whitesmoke;
@@ -365,7 +376,7 @@
              }
              .page4{
                 width:400px;
-                height:1580px;
+                height:1900px;
              }
              .page41 {
                width:80%;
@@ -375,20 +386,21 @@
                 font-size: 30px;
             }
             .image41,.image42,.image43{
-                width:240px;
-                height:500px;
-                margin-left:-5px;
+                width:350px;
+                min-height:580px;
+                margin-left:2px;
                 margin-bottom:20px;
             }
             .image43{
-                margin-bottom:100px;
+                margin-bottom:420px;
+                min-height:500px;
             }
             .image41{
                 margin-top:-640px;
             }
             .image41 img,.image42 img,.image43 img{
-                width:235px;
-                height:190px;
+                width:350px;
+                height:330px;
             }
              .page42{
                 width:auto;
@@ -401,7 +413,7 @@
              }
              .page5{
                 width:400px;
-                min-height:1450px;
+                min-height:1780px;
              }
              .page51{
                 margin-left:-950px;
@@ -410,15 +422,20 @@
                 max-width:300px;
                 flex-direction: column;
                 margin-left:-960px;
-                margin-top:380px;
+                margin-top:490px;
              }
              .page53 img,.page54 img,.page55 img{
-                width:235px;
-                height:190px;
+                width:330px;
+                height:300px;
              }
              .page53,.page54,.page55{
-                max-width:240px;
-                height:500px;
+                max-width:350px;
+                min-height:500px;
+                margin-top:20px;
+                margin-left:-8px;
+             }
+             .page54{
+                min-height: 550px;
              }
              .page6{
                 max-width:400px;
@@ -426,29 +443,32 @@
              }
              .image61 img{
                 margin:0;
-                margin-left:10px;
-                width:250px;
-                height:300px;
+                margin-left:-30px;
+                width:360px;
+                height:350px;
              }
              .page62{
                 margin:0;
                 margin-top:330px;
-                margin-left:-300px;
+                margin-left:-330px;
              }
              .page6 .p62{
                 max-width:250px;
                 font-size: 20px;
                 text-align: center;
+                margin-left:-30px;
+                margin-top:50px;
              }
              .page6 .pp{
                 margin:0;
-                max-width:280px;
+                max-width:320px;
                 font-size: 15px;
                 text-align: center;
+                margin-left:-50px;
              }
              .page7{
                 max-width:400px;
-                min-height:1150px;
+                min-height:1290px;
              }
              .page71 .h{
                 font-size: 18px;
@@ -458,20 +478,23 @@
                 max-width:250px;
                 display: flex;
                 flex-direction: column;
-                margin-left:-50px;
+                margin-left:-150px;
              }
              .page72{
                 padding:-20px;
              }
              .page721,.page722,.page731,.page732{
-                max-width:160px;
-                max-height:100px;
+                max-width:250px;
+                max-height:150px;
+             }
+             .page722{
+                max-height:170px;
              }
              .page72 p,h4,h6{
-                font-size: 10px;
+                font-size: 15px;
              }
              .page73 p,h4,h6{
-                font-size: 10px;
+                font-size: 15px;
              }
              .page72 p,.page73 p{
                 margin-top:-20px;
@@ -573,10 +596,11 @@
                 body{
                   max-width:720px;
                   overflow-x: hidden;
+                  margin:0;
                 }
                 #myVideo{
                 max-width:720px;
-                min-height:500px;
+                max-height:500px;
                 object-fit:fill;
                }
                 .tags ul{
@@ -634,9 +658,9 @@
                     max-width:720px;
                 }
                 .page2 img{
-                    width:600px;
-                    height:200px;
-                    margin-left:140px;
+                    width:680px;
+                    height:190px;
+                    margin-left:100px;
                 }
                 .image2{
                     width:700px;
@@ -648,43 +672,55 @@
                 .page3{
                     text-align: center;
                 }
+                .page3 h1{
+                    font-size: 48px;
+                }
+                .page3 p{
+                    font-size: 20px;
+                }
                 .app{
                     left:50%;
                 }
                 .page4{
-                    height:1800px;
-                }
-                .page5{
-                    min-height:1750px;
+                    height:2250px;
                 }
                 .page42,.page52{
                     flex-direction: column;
                 }
                 .page42{
                     width:700px;
-                }
-                .image41{
-                    margin-top:-890px;
+                    margin-bottom:750px;
                 }
                 .image41,.image42,.image43{
-                    width:500px;
+                    width:630px;
+                    min-height:600px;
+                    margin-top:20px;
+                }
+                .image41,.image42{
+                    min-height:650px;
                 }
                 .image41,.image43{
                     text-align: center;
                 }
                 .image41 img,.image42 img,.image43 img{
-                    width:495px;
+                    width:630px;
+                    height:400px;
+                }
+                .page5{
+                    min-height:2020px;
                 }
                 .page52{
                     max-width:500px;
-                    margin-top:500px;
+                    margin-top:620px;
                 }
                 .page52 .page53,.page52 .page54,.page52 .page55{
-                    width:500px;
-                    min-height:500px;
+                    width:630px;
+                    min-height:600px;
+                    margin-top:20px;
                 }
                 .page53 img,.page54 img,.page55 img{
-                    width:495px;
+                    width:630px;
+                    height:400px;
                 }
                 .page53 p,.page54 p,.page55 p{
                     width:400px;
@@ -695,40 +731,57 @@
                 .page11 .page114{
                     width:100px;
                 }
+                .page6{
+                    min-height:1300px;
+                }
+                .image61,.page62{
+                    height:540px;
+                }
+                .image61 img{
+                    width:680px;
+                    margin:0;
+                    margin-left:-50px;
+                }
+                .page62{
+                    min-height:700px;
+                    margin-top:600px;
+                    text-align: center;
+                    margin-left:-620px;
+                }
+                .page62 .p62{
+                    margin:0;
+                    font-size: 50px;
+                    margin-top:-20px;
+                    margin-left:-40px;
+                }
+                .page62 .pp{
+                    width:600px;
+                    margin:0;
+                    font-size: 28px;
+                    margin-left:-50px;
+                }
                 .page7{
                     min-height:1600px;
                 }
                 .page72,.page73{
                     flex-direction: column;
                 }
-                .page6{
-                    min-height:1500px;
+                .page721,.page722,.page731,.page732{
+                    min-width:540px;
+                    min-height:200px;
                 }
-                .image61{
-                    height:100px
+                .page72 p,.page73 p{
+                    font-size:20px;
                 }
-                .image61 img{
-                    width:500px;
-                    height:550px;
-                    margin-left:-200px;
+                .page721 h4,.page722 h4,.page731 h4,.page732 h4{
+                    font-size:22px;
                 }
-                .page62{
-                    width:400px;
-                    max-height:570px;
-                    margin-top:600px;
-                    margin-left:-550px;
-                    text-align: center;
-                }
-                .page62 .pp{
-                    width:600px;
-                    font-size: 30px;
-                }
-                .page62 .p62{
-                    margin-left: 100px;
+                .page721 h6,.page722 h6,.page731 h6,.page732 h6{
+                    font-size: 18px;
                 }
                 .app{
-                    top:60%;
-                    left:90%;
+                    position: fixed;
+                    margin-left:250px;
                 }
                 .page121{
                     min-height:500px;
@@ -749,7 +802,7 @@
             }
             #myVideo{
                 max-width:1170px;
-                min-height:750px;
+                max-height:750px;
                 object-fit:fill;
             }
             .tags ul{
@@ -851,25 +904,26 @@
                 font-size: 1.8vmin;
             }
             .page4{
-                height:2900px;
+                height:3350px;
             }
             .page42{
                 flex-direction: column;
             }
             .image41,.image42,.image43{
-                width:800px;
-                min-height:850px;
+                width:1100px;
+                min-height:1000px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin:10px;
             }
             .image41 img,.image42 img,.image43 img{
-                width:750px;
-                height:560px;
+                width:1100px;
+                height:700px;
             }
             .image41{
-                margin-top:-2000px;
+                margin-top:-2400px;
             }
             .image41 ul{
                 margin-left:80px;
@@ -879,42 +933,47 @@
                 font-size:20px;
             }
             .page5{
-                min-height:2800px;
+                min-height:3000px;
             }
             .page52{
                 flex-direction: column;
             }
             .page53,.page54,.page55{
-                min-width:800px;
-                min-height:850px;
+                min-width:1100px;
+                min-height:900px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 font-size: 21px;
+                margin: 10px;
             }
             .page53 img,.page54 img,.page55 img{
-                width:750px;
-                height:550px;
+                width:1100px;
+                height:630px;
+            }
+            .page53 p,.page54 p,.page55 p{
+                width:800px;
             }
             .page53{
-                margin-top:2050px;
+                margin-top:2250px;
             }
             .page6{
-                min-height:1450px;
+                min-height:1600px;
             }
             .image61,.page62{
                 height:540px;
             }
             .page62{
-                width:800px;
+                width:850px;
                 height:700px;
-                margin-top:700px;
-                margin-left:-750px;
+                margin-top:790px;
+                margin-left:-1000px;
             }
             .image61 img{
-                width:800px;
-                height:700px;
+                width:1100px;
+                height:800px;
+                margin-left:-130px;
             }
             .page62 .p62{
                 margin-left:-50px;
@@ -923,31 +982,34 @@
             }
             .page62 .pp{
                 margin: 0;
-                width:700px;
-                font-size: 30px;
+                width:850px;
+                font-size: 35px;
                 text-align: center;
             }
             .pp br{
                 display: none;
             }
             .page7{
-                min-height:1950px;
+                min-height:2180px;
             }
             .page72,.page73{
                 flex-direction: column;
             }
             .page721,.page722,.page731,.page732{
-                min-width:600px;
-                min-height:270px;
+                min-width:950px;
+                min-height:350px;
             }
             .page721 p,.page722 p,.page731 p,.page732 p{
-                font-size: 2vmin;
+                font-size: 35px;
             }
             .page721 h4,.page722 h4,.page731 h4,.page732 h4{
-                font-size: 2.5vmin;
+                font-size: 30px;
+            }
+            .page722{
+                min-height:360px;
             }
             .page721 h6,.page722 h6,.page731 h6,.page732 h6{
-                font-size: 20px;
+                font-size: 21px;
             }
             .page10{
                 min-height:380px;
@@ -981,7 +1043,7 @@
                 font-size: 2.5vmin;
             }
             iframe{
-                width:900px;
+                width:1150px;
                 height:600px;
             }
             .page11 .page114{
@@ -1022,7 +1084,7 @@
         }
     </style>
     <div class="page1">
-        <video autoplay muted loop id="myVideo">
+        <video autoplay muted loop id="myVideo" loading="lazy">
             <source src="images/video.mp4.mp4" type="video/mp4">
           </video>
         <div class="page12">
@@ -1266,7 +1328,6 @@
             width:340px;
             height:500px;
             padding:10px;
-          
         }
         .page53{
             background-color: #2b306e;
@@ -1449,6 +1510,7 @@
             height:100px;
             background-color: #120101;
             display: flex;
+            justify-content: center;
         }
         .page122 a{
             text-decoration: none;
