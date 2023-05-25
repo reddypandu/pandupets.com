@@ -287,10 +287,12 @@
                 overflow-x: hidden;
              }
              #myVideo{
-                position:fixed;
+                position: fixed;
                 max-width:400px;
                 max-height:450px;
+                min-height:450px;
                 object-fit:fill;
+                
              }
              .tags ul{
                 padding:0;
@@ -603,7 +605,9 @@
                 #myVideo{
                 max-width:720px;
                 max-height:500px;
+                min-height: 500px;
                 object-fit:fill;
+                
                }
                 .tags ul{
                 padding:0;
@@ -804,7 +808,9 @@
             }
             #myVideo{
                 max-width:1170px;
-                max-height:750px;
+                min-height:750px;
+                height:auto;
+                max-height: 750px;
                 object-fit:fill;
             }
             .tags ul{
@@ -1079,8 +1085,9 @@
             #myVideo{
                 min-width:100%;
                 max-height:625px;
+                min-height:625px;
             }
-            .page1,.page3,.page4,.page5,.page6,.page7,.page8,.page10,.page11,.page121{
+            .page1,.page2,.page3,.page4,.page5,.page6,.page7,.page8,.page10,.page11,.page121{
                 min-width:100vw;
             }
             .page114{
@@ -1096,6 +1103,7 @@
             height:100vh;
             object-fit: fill;
             z-index:-100;
+            overflow-y: hidden;
         }
     </style>
     <div class="page1">
