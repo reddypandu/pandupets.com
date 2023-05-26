@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
-.page42 .reveal{
+/*.page42 .reveal{
         transform: translateX(-200px) rotate(-50deg);
         opacity: 0;
         transition: 0.3s all ease-in-out;
@@ -8,4 +8,4 @@
 .reveal.active{
     transform: translateX(0) rotate(0);
     opacity: 1;
-}
+}*/
